@@ -25,9 +25,14 @@ npm run dev
 
 ```
 
-To create embeddigns from a website
+Generate embeddings from a URL
 
 ```bash
 npm run scrape "URL"
-npx drizzle-kit studio
+```
+
+Generate embeddings from a pdf
+
+```bash
+npm run text
 ```

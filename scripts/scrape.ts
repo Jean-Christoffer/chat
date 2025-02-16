@@ -33,7 +33,7 @@ async function scrape() {
         const docs = await cheerioLoader.load();
 
         const splitter = new RecursiveCharacterTextSplitter({
-            chunkSize: 2000, // 1000 characters
+            chunkSize: 2000,
             chunkOverlap: 100,
         });
         const allSplits = await splitter.splitDocuments(docs);

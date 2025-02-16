@@ -1,8 +1,8 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { Chat as ChatMessage } from "./components/Chat";
-import { Button } from "./components/Button";
+import { Chat as ChatMessage } from "../components/Chat";
+import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 
 export default function Chat() {
@@ -71,7 +71,7 @@ export default function Chat() {
               value={input}
               onChange={handleInputChange}
             />
-            <Button label="Send" type="submit" onClick={handleSubmit} />
+            <Button onClick={handleSubmit}>Send</Button>
           </form>
         </div>
       </div>

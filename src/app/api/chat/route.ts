@@ -4,8 +4,7 @@ import { streamText, tool } from 'ai';
 import { z } from 'zod';
 import { findRelevantContent } from '../../../lib/ai/embeddings';
 
-// Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
+export const maxDuration = 40;
 
 export async function POST(req: Request) {
     const { messages } = await req.json();
@@ -13,9 +12,10 @@ export async function POST(req: Request) {
     const result = streamText({
         model: openai('gpt-4o'),
         messages,
-        system: `You are a helpful assistant with only knowledge of the data embeddings you have recieved. Check your knowledge base before answering any questions.
-    Only respond to questions using information from tool calls.
-    if no relevant information is found in the tool calls, respond, "Sorry, I currently dont have that knowledge in my database."`,
+        system: `You are a helpful assistant with access only to the data embeddings you have received. Always check your knowledge base before answering any questions.
+                - Only respond using information retrieved from tool calls.
+                - If no relevant information is found in the tool calls, reply with: "Sorry, I currently don't have that knowledge in my database."`,
+
         tools: {
             addResource: tool({
                 description: `add a resource to your knowledge base.
