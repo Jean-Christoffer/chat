@@ -3,12 +3,13 @@ RAG_TEMPLATE
 ## Getting Started
 
 fill the requried env
-
-POSTGRES_USER=
-POSTGRES_PASSWORD=
-POSTGRES_DB=
-OPENAI_API_KEY=
-DATABASE_URL=
+<ul>
+<li>POSTGRES_USER</li>
+<li>POSTGRES_PASSWORD</li>
+<li>POSTGRES_DB</li>
+<li>OPENAI_API_KEY</li>
+<li>DATABASE_URL</li>
+</ul>
 
 ```bash
 docker compose up -d
