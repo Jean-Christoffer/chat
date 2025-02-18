@@ -12,11 +12,19 @@ export const Chat = ({
 }) => {
   return (
     <div
-      className="flex gap-3 my-4 text-gray-600 text-sm flex-1"
+      className="flex gap-3 my-4 text-white text-sm flex-1"
       style={{ overflowAnchor: "none" }}
     >
       <div className="leading-relaxed">
-        <span className="block font-bold text-gray-700">{role} </span>
+        <strong>
+          <span
+            className={`${
+              role === "user" ? "text-[#007acc]" : "text-[#DCDCAA]"
+            } block font-bold`}
+          >
+            {role}{" "}
+          </span>
+        </strong>
         {role === "user" ? (
           <span>{message}</span>
         ) : (
