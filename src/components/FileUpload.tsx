@@ -31,7 +31,6 @@ const FileUpload = () => {
       setUploadStatus(response);
     } catch (error) {
       console.log(error);
-      setUploadStatus("Upload failed. Please try again.");
     }
 
     setCurrentFile(undefined);
