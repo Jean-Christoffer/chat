@@ -30,9 +30,3 @@ Generate embeddings from a URL
 ```bash
 npm run scrape "URL"
 ```
-
-Generate embeddings from a pdf
-
-```bash
-npm run text
-```

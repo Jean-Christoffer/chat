@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.1.12",
-    "@langchain/community": "^0.3.30",
+    "@langchain/community": "^0.3.31",
     "@langchain/core": "^0.3.40",
     "@radix-ui/react-slot": "^1.1.2",
     "ai": "^4.1.41",
