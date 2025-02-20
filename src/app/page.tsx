@@ -18,20 +18,25 @@ export default function Chat() {
   }, [messages]);
 
   return (
-    <main className="p-6 flex flex-col justify-center items-center">
+    <main className="h-full w-full flex justify-center items-center flex-col ">
       <div
         id="chat-container"
-        className="flex flex-col p-5 rounded-xl border min-h-screen  max-w-5xl w-full shadow-lg shadow-[#007acc] bg-[#0A0A0A] my-2 relative"
+        className="flex flex-col max-w-5xl w-full border-none bg-[#0A0A0A] relative h-screen"
       >
-        <header className="flex items-center justify-between space-y-1.5 pb-6 bg-[#1e1e1e] p-2 rounded ">
+        <header className="flex items-center justify-between space-y-1.5 pb-6 bg-[#1e1e1e] p-2 rounded mt-2 ">
           <h1 className="font-bold text-2xl  tracking-tight text-[#4EC9B0]">
             The Assistant 🤖
           </h1>
           <FileUpload />
         </header>
-        <div className="overflow-y-auto">
+        <div className="overflow-y-scroll flex flex-col h-full items-center [scrollbar-width:none]">
+          {!messages.length && (
+            <h2 className="font-bold text-3xl m-auto">
+              What can i help you with ?
+            </h2>
+          )}
           <div
-            className="pr-4 overflow-y-auto"
+            className="w-full text-start overflow-y-auto"
             id="chat-messages"
             style={{ display: "table" }}
             scroll-behavior="smooth"
