@@ -23,8 +23,8 @@ export default function Chat() {
   return (
     <main className="h-full w-full flex justify-center items-center flex-col ">
       <div
-        id="chat-container "
-        className="flex flex-col max-w-5xl w-full border-none bg-[#0A0A0A] relative h-screen"
+        id="chat-container"
+        className="flex flex-col max-w-5xl w-full border-none bg-[#0A0A0A] relative h-screen p-4"
       >
         <Header />
         <div className="overflow-y-scroll flex flex-col h-full items-center [scrollbar-width:none]">
