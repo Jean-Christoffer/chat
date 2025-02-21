@@ -1,4 +1,3 @@
-"use client";
 import { useRef, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -35,7 +34,6 @@ const FileUpload = () => {
 
     setCurrentFile(undefined);
 
-    // Clear upload status after 500ms
     setTimeout(() => setUploadStatus(""), 2000);
   };
 
@@ -45,7 +43,7 @@ const FileUpload = () => {
         <>
           <Input
             type="file"
-            accept=".docx, .doc, .pdf"
+            accept=".pdf"
             ref={fileInputRef}
             className="hidden"
             onChange={handleFile}
