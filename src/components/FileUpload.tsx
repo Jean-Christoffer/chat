@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { textParser } from "../../scripts/processText";
-import UploadIcon from "./UploadIcon";
+import UploadIcon from "./ui/UploadIcon";
 
 const FileUpload = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
